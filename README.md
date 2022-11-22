@@ -1,34 +1,75 @@
-# PROYECTO INFORMÁTICO - GRUPO SCOUTS CENTINELAS 113
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
+</p>
 
-## IMPORTANTE! Leer este documento, y la [wiki](https://github.com/CookLoco/proyecto-informatico-scouts/wiki) del proyecto
+[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
+[travis-url]: https://travis-ci.org/nestjs/nest
+[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
+[linux-url]: https://travis-ci.org/nestjs/nest
+  
+  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
+    <p align="center">
+<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/dm/@nestjs/core.svg" alt="NPM Downloads" /></a>
+<a href="https://travis-ci.org/nestjs/nest"><img src="https://api.travis-ci.org/nestjs/nest.svg?branch=master" alt="Travis" /></a>
+<a href="https://travis-ci.org/nestjs/nest"><img src="https://img.shields.io/travis/nestjs/nest/master.svg?label=linux" alt="Linux" /></a>
+<a href="https://coveralls.io/github/nestjs/nest?branch=master"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#5" alt="Coverage" /></a>
+<a href="https://gitter.im/nestjs/nestjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge"><img src="https://badges.gitter.im/nestjs/nestjs.svg" alt="Gitter" /></a>
+<a href="https://opencollective.com/nest#backer"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="https://opencollective.com/nest#sponsor"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+  <a href="https://paypal.me/kamilmysliwiec"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
+  <a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+</p>
+  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
+  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## METODOLOGÍA DE TRABAJO
+## Description
 
-Cada módulo se trabajará en ramas (**branch**) en donde se publicará el trabajo desarrollado por su responsable:
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-- **Equipo 1:** Gestión de recursos humanos (registro y suguimiento de la comunidad scout)
-- **Equipo 2:** Gestión de procesos logisticos (eventos e inventarios)
+## Installation
 
-A la hora de hacer cambios y publicar commits:
+```bash
+$ npm install
+```
 
-- **No modificar la rama master**
-- Es importante **hacer commit constantemente**
-- **Evitar publicar cambios incompletos que puedan romper la funcionalidad de la aplicación.**
-- **Informar al equipo** que cambios se van a hacer y preferiblemente sobre que archivos se va a trabajar.
-  - Así evitaremos colisión de código que nos generará proceso adicional a la hora de hacer el push.
-- El nombre del **commit debe ser claro y descriptivo**, para que cada miembro sepa que se hizo anteriormente.
-- **Evitar dejar cambios locales** en archivos que puedan ser requeridos por otros compañeros.
+## Running the app
 
-## ARQUITECTURA DEL PROYECTO
+```bash
+# development
+$ npm run start
 
-### BACKEND
+# watch mode
+$ npm run start:dev
 
-Para el backend haremos uso de **Nest.js** como framework de Node.js, debido a que nos permite generar un proyecto muy bien estructurado gracias a las buenas prácticas y patrones con las que está construido (tales como decorador, inyección de dependencias y MVC), de tal forma que podremos identificar claramente que corresponde a las entidades o modelos, los controladores, módulos, base de datos, facilitando la corrección de bugs y haciendo el código más legible y entendible.
+# production mode
+$ npm run start:prod
+```
 
-### FRONTEND
+## Test
 
-Para el frontend haremos uso de **Next.js** como framework de React, ya que de forma similar a Nest.js, permite generar código más limpio y entendible debido a la forma en cómo se organiza el proyecto, es consistente al igual que Nest.js con el uso TypeScript, incluye webpack y babel configurados para llevar el proyecto a producción e implementa directamente **SSG** (Static Site Generation) y **SSR** (Server Side Render), siendo ambas un poco complejas de implementar en un proyecto desde cero.
+```bash
+# unit tests
+$ npm run test
 
-#### ¿Por qué SSG y SSR en este proyecto?
+# e2e tests
+$ npm run test:e2e
 
->Next.js nos permite decidir de una forma muy fácil que vistas van a ser renderizadas al momento de llevar a cabo el proyecto a un entorno de producción (SSG) o que vistas van a ser renderizadas por el servicio cada que se haga la petición de la vista (SSR), siendo la primera (SSG) útil cuando no se requiere que la vista sea dinámica en el sentido de que no va a ser alimentada por la base de datos ante cada solicitud (pero si puedo alimentarse de datos únicamente al momento del build), es decir, que no va a cambiar su información una vez desplegada a producción, mientras que la segunda (SSR) útil cuando se trabaja con alimentación de datos constantemente, es decir, que la información puede cambiar según que usuario requiera la vista, o cuando tiene información susceptible al cambio.
+# test coverage
+$ npm run test:cov
+```
+
+## Support
+
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+## Stay in touch
+
+- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
+
+## License
+
+  Nest is [MIT licensed](LICENSE).
